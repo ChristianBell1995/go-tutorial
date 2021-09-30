@@ -29,6 +29,7 @@ func main() {
 	// 	fmt.Println(elem)
 	// }
 
+	// Example 2
 	// Make an unbuffered channel deadlock!
 	myChan := make(chan string)
 	// go func() {
@@ -36,6 +37,7 @@ func main() {
 	// }()
 	myChan <- "hi"
 
+	// Example 3
 	// For unbuffered channels there must be a sender and a receiver ready otherwise you get a deadlock!
 
 	// Buffered channels accept a limited number of values without a corresponding receiver for those values. So you can push values in whilst outside a goroutine.

@@ -97,10 +97,14 @@ func main() {
 		panic(fmt.Errorf("binary.Write failed: %v", err))
 	}
 	fmt.Println(buf.Bytes())
+	fmt.Println("Length of bytes")
+	fmt.Println(len(buf.Bytes()))
 
 	fmt.Println("What does JSON look like as bytes?")
 
 	someJson := "{\"Bird\":10,\"Cat\":\"Fuzzy\"}"
+	fmt.Println(someJson)
 	fmt.Println([]byte(someJson))
+	fmt.Println(len([]byte(someJson)))
 
 }
